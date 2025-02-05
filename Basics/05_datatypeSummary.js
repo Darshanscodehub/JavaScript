@@ -14,9 +14,10 @@ const anotherId = Symbol('123')
 console.log(id === anotherId);
 
 
-// Reference (Non primitive)
+// Reference (Non primitive)(Call by reference)
 // Array, Objects, Functions
-
+// Objects, Arrays, and Functions are not strictly "call by reference".
+// They behave like "call by sharing" → the reference is passed, but reassigning the variable inside a function does NOT affect the original object.
 const heros = ["Shaktiman", "naagraj"]
 let myobj = {
     name :"Hitesh",
