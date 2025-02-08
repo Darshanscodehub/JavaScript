@@ -1,5 +1,5 @@
 const myArr = [0, 1, 2, 3, 4, 5]
-const myHeors = ["shaktiman", "naagraj"]
+const myHeors = ["shaktiman", "naagraj", "Superman"]
 
 // console.log(myArr); //[ 0, 1, 2, 3, 4, 5 ]
 // console.log(myHeors); // [ 'shaktiman', 'naagraj' ]
