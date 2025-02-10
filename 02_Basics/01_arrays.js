@@ -31,7 +31,8 @@ const newArr = myArr.join()
 // join() combines all elements of an array into a single string, separated by commas (or a custom separator).
 // by default the separator is comma(,).
 
-const newArr2 = myArr.join(" ") // Using space as a separator
+const newArr2 = myArr.join(" ") // Using
+//  space as a separator
 // console.log(newArr2); //0 1 2 3 4 5 6
 
 
