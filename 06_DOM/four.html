@@ -1,0 +1,90 @@
+<!-- 
+  This is the HTML file that serves as the structure for our web page.
+  It includes a list of programming languages that we will manipulate using JavaScript.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+      The head section contains metadata about the document.
+      It includes the character encoding, compatibility with Internet Explorer, and the viewport settings for mobile devices.
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <!-- 
+      This is the main content of the HTML document.
+      It includes an unordered list with a single list item containing the text "Javascript".
+    -->
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // 
+    // This script tag contains the JavaScript code that manipulates the HTML document.
+    // 
+
+    // 
+    // This function adds a new list item to the unordered list with the specified language name.
+    // It uses the innerHTML property to set the text content of the new list item.
+    // 
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    // 
+    // Call the addLanguage function to add "python" and "typescript" to the list.
+    // 
+    addLanguage("python")
+    addLanguage("typescript")
+
+    // 
+    // This function adds a new list item to the unordered list with the specified language name.
+    // It uses the appendChild method to add a text node to the new list item.
+    // This approach is more efficient than using innerHTML because it avoids parsing the HTML string.
+    // 
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    // 
+    // Call the addOptiLanguage function to add "golang" to the list.
+    // 
+    addOptiLanguage('golang')
+
+    // 
+    // This section of code edits the second list item.
+    // It uses the querySelector method to select the second list item and logs it to the console.
+    // Then, it creates a new list item with the text "Mojo" and replaces the second list item with the new one.
+    // 
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    //secondLang.innerHTML = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    // 
+    // This section of code edits the first list item.
+    // It uses the querySelector method to select the first list item and sets its outerHTML property to a new list item with the text "TypeScript".
+    // 
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    // 
+    // This section of code removes the last list item.
+    // It uses the querySelector method to select the last list item and calls the remove method to remove it from the document.
+    // 
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!-- 
+  This is the document type declaration, indicating that this is an HTML document.
+  The 'html' element is the root element of the document.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 
+    The 'head' element contains metadata about the document, such as the character encoding, 
+    viewport settings, and links to external stylesheets or scripts.
+  -->
+  <head>
+    <!-- 
+      The 'meta' element provides metadata about the document. 
+      In this case, it specifies the character encoding (UTF-8) and the viewport settings.
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 
+      The 'title' element sets the title of the page, which appears in the browser's title bar.
+    -->
+    <title>Chai aur code </title>
+  </head>
+  
+  <!-- 
+    The 'body' element contains the content of the HTML document.
+    In this case, it has a style attribute that sets the background color to #212121 and the text color to #fff.
+  -->
+  <body style="background-color: #212121; color: #fff;">
+    
+  </body>
+  
+  <!-- 
+    The 'script' element contains JavaScript code that is executed by the browser.
+  -->
+  <script>
+    // Create a new 'div' element using the 'createElement' method.
+    const div = document.createElement('div')
+    
+    // Log the newly created 'div' element to the console for debugging purposes.
+    console.log(div);
+    
+    // Set the class name of the 'div' element to 'main'.
+    div.className = "main"
+    
+    // Set the ID of the 'div' element to a random number between 1 and 10.
+    div.id = Math.round(Math.random() * 10 + 1)
+    
+    // Set the title attribute of the 'div' element to 'generated title'.
+    div.setAttribute("title", "generated title")
+    
+    // Set the background color and padding of the 'div' element using the 'style' property.
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    
+    // Create a new text node with the text 'Chai aur code'.
+    const addText = document.createTextNode("Chai aur code")
+    
+    // Append the text node to the 'div' element.
+    div.appendChild(addText)
+    
+    // Append the 'div' element to the 'body' element.
+    document.body.appendChild(div)
+  </script>
+</html>
