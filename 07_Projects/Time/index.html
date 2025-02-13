@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines character encoding and ensures proper rendering on all devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Local Time</title> <!-- Title of the webpage -->
+
+    <style>
+        /* Sets the background color to black and text color to white */
+        body{
+            background-color: black;
+            color: white;
+        }
+        
+        /* Centers content both vertically and horizontally */
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh; /* Takes full viewport height */
+        }
+
+        /* Styles the heading/banner text */
+        #banner{
+            font-size: 30px;
+        }
+
+        /* Styles the clock display */
+        #clock{
+            font-size: 40px;
+            background-color: rgb(212, 64, 15); /* Red background */
+            padding: 20px 50px; /* Adds space around text */
+            margin-top: 10px;
+            border-radius: 5px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div id="banner">Your Local Time</div> <!-- Heading for the clock -->
+        <div id="clock"></div> <!-- This div will display the time -->
+    </div>
+
+    <script>
+        // Selects the div with id 'clock'
+        const clock = document.getElementById('clock');
+
+        // Updates the clock every second (1000 ms)
+        setInterval(function (){
+            let date = new Date(); // Gets the current date and time
+            clock.innerHTML = date.toLocaleTimeString(); // Converts time to a readable format
+        }, 1000); // Repeats every 1000 milliseconds (1 second)
+    </script>
+</body>
+</html>
